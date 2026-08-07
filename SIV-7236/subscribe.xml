@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<scenario name="Basic SUBSCRIBE scenario with OPTIONS">
+ <recv request="OPTIONS">
+ </recv>
+ 
+ <send>
+  <![CDATA[
+  SIP/2.0 200 OK
+  [last_Via:]
+  [last_From:]
+  [last_To:]
+  [last_Call-ID:]
+  [last_CSeq:]
+  Contact: <sip:[local_ip]:[local_port];transport=[transport]>
+  Content-Length: 0
+  ]]>
+ </send>
+ 
+ <pause milliseconds="2000"/>
+ 
+ <send retrans="500">
+  <![CDATA[
+  
+    SUBSCRIBE sip:[service]@[remote_ip]:[remote_port] SIP/2.0
+    Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch]
+    From: sipp <sip:sipp@[local_ip]:[local_port]>;tag=[call_number]
+    To: <sip:[service]@[remote_ip]:[remote_port]>
+    Call-ID: [call_id]
+    CSeq: 1 SUBSCRIBE
+    Contact: sip:sipp@[local_ip]:[local_port]
+    Max-Forwards: 70
+    Event: presence
+    Accept: application/pidf+xml
+    Content-Length: 0
+  
+  ]]>
+ </send>
+
+ <recv response="405" optional="true" next="1">
+ </recv>
+ 
+ <recv response="100" optional="true">
+ </recv>
+
+ <recv response="200" rtd="true" crlf="true">
+ </recv>
+  
+ <recv request="NOTIFY">
+ </recv>
+ 
+ <send next="2">
+  <![CDATA[
+  SIP/2.0 200 OK
+  [last_Via:]
+  [last_From:]
+  [last_To:]
+  [last_Call-ID:]
+  [last_CSeq:]
+  Contact: <sip:[local_ip]:[local_port];transport=[transport]>
+  Content-Length: 0
+  ]]>
+ </send>
+ 
+ <label id="1" /> <!-- label for handling negative resp for INV -->
+ <send next="2">
+  <![CDATA[
+  
+    ACK sip:[service]@[remote_ip]:[remote_port] SIP/2.0
+    [last_Via:]
+    From: sipp <sip:sipp@[local_ip]:[local_port]>;tag=[call_number]
+    To: sut <sip:[service]@[remote_ip]:[remote_port]>[peer_tag_param]
+    Call-ID: [call_id]
+    CSeq: 1 ACK
+    Subject: Performance Test
+    Content-Length: 0
+  
+  ]]>
+   </send>
+   
+   <label id="2" /> <!-- label for final finishing the script -->
+ </scenario>

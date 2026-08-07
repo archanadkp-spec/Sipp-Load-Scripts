@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<scenario name="OPTIONS with INVITE scenario">
+ <recv request="OPTIONS|INVITE" crlf="true" regexp_match="true">
+  <action>
+   <ereg regexp="[0-9]{1,9} INVITE" search_in="hdr" header="CSeq:" assign_to="invite"/>
+   <!--ereg regexp="<sip:4([0-9.@>]+)" search_in="hdr" header="To:" assign_to="4xx"/>
+   <ereg regexp="<sip:5([0-9.@>]+)" search_in="hdr" header="To:" assign_to="5xx"/>
+   <ereg regexp="<sip:6([0-9.@>]+)" search_in="hdr" header="To:" assign_to="6xx"/-->
+  </action>
+ </recv>
+ 
+ 
+ <send next="oninvite" test="invite">
+  <![CDATA[
+  SIP/2.0 100 TRYING
+  [last_Via:]
+  [last_From:]
+  [last_To:]
+  [last_Call-ID:]
+  [last_CSeq:]
+  Contact: <sip:[local_ip]:[local_port];transport=[transport]>
+  Content-Length: 0
+  ]]>
+ </send>
+ 
+ <send next="finish">
+  <![CDATA[
+  SIP/2.0 200 OK
+  [last_Via:]
+  [last_From:]
+  [last_To:]
+  [last_Call-ID:]
+  [last_CSeq:]
+  Contact: <sip:[local_ip]:[local_port];transport=[transport]>
+  Content-Length: 0
+  ]]>
+ </send>
+ 
+ <label id="oninvite"/>
+ 
+ <send>
+  <![CDATA[
+  SIP/2.0 603 Decline
+  [last_Via:]
+  [last_From:]
+  [last_To:]
+  [last_Call-ID:]
+  [last_CSeq:]
+  Contact: <sip:[local_ip]:[local_port];transport=[transport]>
+  Content-Length: 0
+  ]]>
+ </send>
+ 
+ <recv request="ACK">
+ </recv>
+ 
+ <label id="finish"/>
+ <nop display = "End of Test" clrf="true"/>
+ </scenario>

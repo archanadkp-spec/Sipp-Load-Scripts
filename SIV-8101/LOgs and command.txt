@@ -1,0 +1,330 @@
+
+INVITE sip:4086422254@10.37.2.112:5060 SIP/2.0
+Via: SIP/2.0/TCP 10.1.9.30:5060;branch=z9hG4bKcc6b6474b35578
+From: "MUDLAGIR BALERI" <sip:10.1.9.30>;tag=34172708~cea8fae9-8379-4502-a91f-09435529c1fb-25922772
+To: <sip:4086422254@10.37.2.112>
+Date: Thu, 02 Dec 2021 21:08:54 GMT
+Call-ID: d08fc80-1ed171b7-cc2904-1e09010a@10.1.9.30
+Supported: timer,resource-priority,replaces
+Min-SE:  1800
+User-Agent: Cisco-CUCM12.5
+Allow: INVITE, OPTIONS, INFO, BYE, CANCEL, ACK, PRACK, UPDATE, REFER, SUBSCRIBE, NOTIFY
+CSeq: 101 INVITE
+Expires: 180
+Allow-Events: presence, kpml
+Supported: X-cisco-srtp-fallback,X-cisco-original-called
+Call-Info: <urn:x-cisco-remotecc:callinfo>; security= Unknown; gci= 1-1905727; isVoip, <sip:10.1.9.30:5060>;method="NOTIFY;Event=telephone-event;Duration=500"
+Call-Info: <urn:x-cisco-remotecc:callinfo>;x-cisco-video-traffic-class=MIXED
+Session-ID: b5621eb128a756fdb7c0a5bf456c7141;remote=00000000000000000000000000000000
+Cisco-Guid: 0218692736-0000065536-0000187512-0503906570
+Session-Expires:  1800
+P-Asserted-Identity: "MUDLAGIR BALERI" <sip:4084406484@10.1.9.30>
+Remote-Party-ID: "MUDLAGIR BALERI" <sip:4084406484@10.1.9.30>;party=calling;screen=yes;privacy=off
+Contact: <sip:4084406484@10.1.9.30:5060;transport=tcp>
+Max-Forwards: 67
+Content-Length: 0
+
+
+--end msg--
+2021-12-02 13:08:54.152 [D] [23293] [pjsua_0]   .Enqueue. SignalOnRxReqEvent Queue Size: 1
+2021-12-02 13:08:54.152 [D] [23288] [evtdisp]   Dequeue. SignalOnRxReqEvent Queue Size: 0
+2021-12-02 13:08:54.152 [D] [23288] [evtdisp]   Processing SIP INVITE received for call id: d08fc80-1ed171b7-cc2904-1e09010a@10.1.9.30
+2021-12-02 13:08:54.152 [D] [23288] [evtdisp]   Incoming (null)
+2021-12-02 13:08:54.152 [D] [23288] [evtdisp]   .Adding account: id=<sip:4086422254@10.37.2.112>
+2021-12-02 13:08:54.152 [D] [23288] [evtdisp]   ..Account <sip:4086422254@10.37.2.112> added with id 53
+2021-12-02 13:08:54.153 [D] [23288] [evtdisp]   ....TX 328 bytes Response msg 100/INVITE/cseq=101 (tdta0x7f426c680588) to TCP 10.1.9.30:34107:
+SIP/2.0 100 Trying
+Via: SIP/2.0/TCP 10.1.9.30:5060;received=10.1.9.30;branch=z9hG4bKcc6b6474b35578
+Call-ID: d08fc80-1ed171b7-cc2904-1e09010a@10.1.9.30
+From: "MUDLAGIR BALERI" <sip:10.1.9.30>;tag=34172708~cea8fae9-8379-4502-a91f-09435529c1fb-25922772
+To: <sip:4086422254@10.37.2.112>
+CSeq: 101 INVITE
+Content-Length:  0
+
+
+--end msg--
+2021-12-02 13:08:55.419 [D] [23289] [SockCom]   Heartbeat Timer Tick
+2021-12-02 13:08:56.838 [D] [23289] [SockCom]   Enqueue. SigEvent Queue Size: 1
+2021-12-02 13:08:56.838 [D] [23288] [evtdisp]   Dequeue. SigEvent Queue Size: 0
+2021-12-02 13:08:56.838 [D] [23288] [evtdisp]   [VSi:RX] Heartbeat received
+2021-12-02 13:08:56.838 [D] [23288] [evtdisp]   [VSi:TX] Heartbeat
+2021-12-02 13:08:59.801 [D] [23289] [SockCom]   Enqueue. Message Queue Size: 1
+2021-12-02 13:08:59.801 [D] [23288] [evtdisp]   Dequeue. Message Queue Size: 0
+2021-12-02 13:08:59.801 [D] [23288] [evtdisp]   Heartbeat from telephony service with id: f6a03b5d-7da0-4b28-80d3-319882a20649
+2021-12-02 13:08:59.801 [D] [23288] [evtdisp]   Heartbeat Ack to telephony service with id: f6a03b5d-7da0-4b28-80d3-319882a20649 timestamp: 1638479339801
+2021-12-02 13:08:59.807 [D] [23293] [pjsua_0]   .RX 516 bytes Request msg CANCEL/cseq=101 (rdata0x7f4270000c80) from TCP 10.1.9.30:34107:
+CANCEL sip:4086422254@10.37.2.112:5060 SIP/2.0
+Via: SIP/2.0/TCP 10.1.9.30:5060;branch=z9hG4bKcc6b6474b35578
+From: "MUDLAGIR BALERI" <sip:4084406484@10.1.9.30>;tag=34172708~cea8fae9-8379-4502-a91f-09435529c1fb-25922772
+To: <sip:4086422254@10.37.2.112>
+Date: Thu, 02 Dec 2021 21:08:54 GMT
+Call-ID: d08fc80-1ed171b7-cc2904-1e09010a@10.1.9.30
+User-Agent: Cisco-CUCM12.5
+CSeq: 101 CANCEL
+Max-Forwards: 70
+Session-ID: b5621eb128a756fdb7c0a5bf456c7141;remote=00000000000000000000000000000000
+Content-Length: 0
+
+
+--end msg--
+2021-12-02 13:08:59.807 [D] [23293] [pjsua_0]   .Enqueue. SignalOnRxReqEvent Queue Size: 1
+2021-12-02 13:08:59.807 [D] [23288] [evtdisp]   Dequeue. SignalOnRxReqEvent Queue Size: 0
+2021-12-02 13:08:59.807 [D] [23288] [evtdisp]   Processing SIP CANCEL received for call id: d08fc80-1ed171b7-cc2904-1e09010a@10.1.9.30
+2021-12-02 13:08:59.808 [D] [23288] [evtdisp]   ......TX 372 bytes Response msg 200/CANCEL/cseq=101 (tdta0x7f426c67e638) to TCP 10.1.9.30:34107:
+SIP/2.0 200 OK
+Via: SIP/2.0/TCP 10.1.9.30:5060;received=10.1.9.30;branch=z9hG4bKcc6b6474b35578
+Call-ID: d08fc80-1ed171b7-cc2904-1e09010a@10.1.9.30
+From: "MUDLAGIR BALERI" <sip:4084406484@10.1.9.30>;tag=34172708~cea8fae9-8379-4502-a91f-09435529c1fb-25922772
+To: <sip:4086422254@10.37.2.112>;tag=uy3gttsuew7n-57Kz3QMUsifheRHwwfn
+CSeq: 101 CANCEL
+Content-Length:  0
+
+
+--end msg--
+2021-12-02 13:08:59.808 [D] [23288] [evtdisp]   ......TX 377 bytes Response msg 487/INVITE/cseq=101 (tdta0x7f426c680588) to TCP 10.1.9.30:34107:
+SIP/2.0 487 Request Terminated
+Via: SIP/2.0/TCP 10.1.9.30:5060;received=10.1.9.30;branch=z9hG4bKcc6b6474b35578
+Call-ID: d08fc80-1ed171b7-cc2904-1e09010a@10.1.9.30
+From: "MUDLAGIR BALERI" <sip:10.1.9.30>;tag=34172708~cea8fae9-8379-4502-a91f-09435529c1fb-25922772
+To: <sip:4086422254@10.37.2.112>;tag=uy3gttsuew7n-57Kz3QMUsifheRHwwfn
+CSeq: 101 INVITE
+Content-Length:  0
+
+
+--end msg--
+2021-12-02 13:08:59.808 [I] [23288] [evtdisp]   ......... --> Disconnected
+2021-12-02 13:08:59.808 [I] [23288] [evtdisp]   .........  [DISCONNCTD] To: "MUDLAGIR BALERI" <sip:10.1.9.30>;tag=34172708~cea8fae9-8379-4502-a91f-09435529c1fb-25922772
+    Call time: 00h:00m:00s, 1st res in 5656 ms, conn in 0ms
+
+2021-12-02 13:08:59.808 [D] [23288] [evtdisp]   .........Deleting account 53..
+2021-12-02 13:08:59.808 [D] [23288] [evtdisp]   ..........Account id 53 deleted
+2021-12-02 13:08:59.808 [D] [23288] [evtdisp]   .........Call 63: deinitializing media..
+2021-12-02 13:08:59.809 [D] [23293] [pjsua_0]   .RX 491 bytes Request msg ACK/cseq=101 (rdata0x7f4270000c80) from TCP 10.1.9.30:34107:
+ACK sip:4086422254@10.37.2.112:5060 SIP/2.0
+Via: SIP/2.0/TCP 10.1.9.30:5060;branch=z9hG4bKcc6b6474b35578
+From: "MUDLAGIR BALERI" <sip:4084406484@10.1.9.30>;tag=34172708~cea8fae9-8379-4502-a91f-09435529c1fb-25922772
+To: <sip:4086422254@10.37.2.112>;tag=uy3gttsuew7n-57Kz3QMUsifheRHwwfn
+Date: Thu, 02 Dec 2021 21:08:54 GMT
+Call-ID: d08fc80-1ed171b7-cc2904-1e09010a@10.1.9.30
+User-Agent: Cisco-CUCM12.5
+Max-Forwards: 70
+CSeq: 101 ACK
+Allow-Events: presence, kpml
+Content-Length: 0
+
+
+
+
+######################################
+sipp scripts before the fix
+
+Command for sipp:
+
+INVITE sip:4086422254@10.37.2.112:5060 SIP/2.0
+Via: SIP/2.0/TCP 10.1.9.30:5060;branch=z9hG4bKcc6b6474b35578
+From: "MUDLAGIR BALERI" <sip:10.1.9.30>;tag=34172708~cea8fae9-8379-4502-a91f-09435529c1fb-25922772
+To: <sip:4086422254@10.37.2.112>
+Date: Thu, 02 Dec 2021 21:08:54 GMT
+Call-ID: d08fc80-1ed171b7-cc2904-1e09010a@10.1.9.30
+Supported: timer,resource-priority,replaces
+Min-SE:  1800
+User-Agent: Cisco-CUCM12.5
+Allow: INVITE, OPTIONS, INFO, BYE, CANCEL, ACK, PRACK, UPDATE, REFER, SUBSCRIBE, NOTIFY
+CSeq: 101 INVITE
+Expires: 180
+Allow-Events: presence, kpml
+Supported: X-cisco-srtp-fallback,X-cisco-original-called
+Call-Info: <urn:x-cisco-remotecc:callinfo>; security= Unknown; gci= 1-1905727; isVoip, <sip:10.1.9.30:5060>;method="NOTIFY;Event=telephone-event;Duration=500"
+Call-Info: <urn:x-cisco-remotecc:callinfo>;x-cisco-video-traffic-class=MIXED
+Session-ID: b5621eb128a756fdb7c0a5bf456c7141;remote=00000000000000000000000000000000
+Cisco-Guid: 0218692736-0000065536-0000187512-0503906570
+Session-Expires:  1800
+P-Asserted-Identity: "MUDLAGIR BALERI" <sip:4084406484@10.1.9.30>
+Remote-Party-ID: "MUDLAGIR BALERI" <sip:4084406484@10.1.9.30>;party=calling;screen=yes;privacy=off
+Contact: <sip:4084406484@10.1.9.30:5060;transport=tcp>
+Max-Forwards: 67
+Content-Length: 0
+
+
+--end msg--
+2021-12-02 13:08:54.152 [D] [23293] [pjsua_0]   .Enqueue. SignalOnRxReqEvent Queue Size: 1
+2021-12-02 13:08:54.152 [D] [23288] [evtdisp]   Dequeue. SignalOnRxReqEvent Queue Size: 0
+2021-12-02 13:08:54.152 [D] [23288] [evtdisp]   Processing SIP INVITE received for call id: d08fc80-1ed171b7-cc2904-1e09010a@10.1.9.30
+2021-12-02 13:08:54.152 [D] [23288] [evtdisp]   Incoming (null)
+2021-12-02 13:08:54.152 [D] [23288] [evtdisp]   .Adding account: id=<sip:4086422254@10.37.2.112>
+2021-12-02 13:08:54.152 [D] [23288] [evtdisp]   ..Account <sip:4086422254@10.37.2.112> added with id 53
+2021-12-02 13:08:54.153 [D] [23288] [evtdisp]   ....TX 328 bytes Response msg 100/INVITE/cseq=101 (tdta0x7f426c680588) to TCP 10.1.9.30:34107:
+SIP/2.0 100 Trying
+Via: SIP/2.0/TCP 10.1.9.30:5060;received=10.1.9.30;branch=z9hG4bKcc6b6474b35578
+Call-ID: d08fc80-1ed171b7-cc2904-1e09010a@10.1.9.30
+From: "MUDLAGIR BALERI" <sip:10.1.9.30>;tag=34172708~cea8fae9-8379-4502-a91f-09435529c1fb-25922772
+To: <sip:4086422254@10.37.2.112>
+CSeq: 101 INVITE
+Content-Length:  0
+
+
+--end msg--
+2021-12-02 13:08:55.419 [D] [23289] [SockCom]   Heartbeat Timer Tick
+2021-12-02 13:08:56.838 [D] [23289] [SockCom]   Enqueue. SigEvent Queue Size: 1
+2021-12-02 13:08:56.838 [D] [23288] [evtdisp]   Dequeue. SigEvent Queue Size: 0
+2021-12-02 13:08:56.838 [D] [23288] [evtdisp]   [VSi:RX] Heartbeat received
+2021-12-02 13:08:56.838 [D] [23288] [evtdisp]   [VSi:TX] Heartbeat
+2021-12-02 13:08:59.801 [D] [23289] [SockCom]   Enqueue. Message Queue Size: 1
+2021-12-02 13:08:59.801 [D] [23288] [evtdisp]   Dequeue. Message Queue Size: 0
+2021-12-02 13:08:59.801 [D] [23288] [evtdisp]   Heartbeat from telephony service with id: f6a03b5d-7da0-4b28-80d3-319882a20649
+2021-12-02 13:08:59.801 [D] [23288] [evtdisp]   Heartbeat Ack to telephony service with id: f6a03b5d-7da0-4b28-80d3-319882a20649 timestamp: 1638479339801
+2021-12-02 13:08:59.807 [D] [23293] [pjsua_0]   .RX 516 bytes Request msg CANCEL/cseq=101 (rdata0x7f4270000c80) from TCP 10.1.9.30:34107:
+CANCEL sip:4086422254@10.37.2.112:5060 SIP/2.0
+Via: SIP/2.0/TCP 10.1.9.30:5060;branch=z9hG4bKcc6b6474b35578
+From: "MUDLAGIR BALERI" <sip:4084406484@10.1.9.30>;tag=34172708~cea8fae9-8379-4502-a91f-09435529c1fb-25922772
+To: <sip:4086422254@10.37.2.112>
+Date: Thu, 02 Dec 2021 21:08:54 GMT
+Call-ID: d08fc80-1ed171b7-cc2904-1e09010a@10.1.9.30
+User-Agent: Cisco-CUCM12.5
+CSeq: 101 CANCEL
+Max-Forwards: 70
+Session-ID: b5621eb128a756fdb7c0a5bf456c7141;remote=00000000000000000000000000000000
+Content-Length: 0
+
+
+--end msg--
+2021-12-02 13:08:59.807 [D] [23293] [pjsua_0]   .Enqueue. SignalOnRxReqEvent Queue Size: 1
+2021-12-02 13:08:59.807 [D] [23288] [evtdisp]   Dequeue. SignalOnRxReqEvent Queue Size: 0
+2021-12-02 13:08:59.807 [D] [23288] [evtdisp]   Processing SIP CANCEL received for call id: d08fc80-1ed171b7-cc2904-1e09010a@10.1.9.30
+2021-12-02 13:08:59.808 [D] [23288] [evtdisp]   ......TX 372 bytes Response msg 200/CANCEL/cseq=101 (tdta0x7f426c67e638) to TCP 10.1.9.30:34107:
+SIP/2.0 200 OK
+Via: SIP/2.0/TCP 10.1.9.30:5060;received=10.1.9.30;branch=z9hG4bKcc6b6474b35578
+Call-ID: d08fc80-1ed171b7-cc2904-1e09010a@10.1.9.30
+From: "MUDLAGIR BALERI" <sip:4084406484@10.1.9.30>;tag=34172708~cea8fae9-8379-4502-a91f-09435529c1fb-25922772
+To: <sip:4086422254@10.37.2.112>;tag=uy3gttsuew7n-57Kz3QMUsifheRHwwfn
+CSeq: 101 CANCEL
+Content-Length:  0
+
+
+--end msg--
+2021-12-02 13:08:59.808 [D] [23288] [evtdisp]   ......TX 377 bytes Response msg 487/INVITE/cseq=101 (tdta0x7f426c680588) to TCP 10.1.9.30:34107:
+SIP/2.0 487 Request Terminated
+Via: SIP/2.0/TCP 10.1.9.30:5060;received=10.1.9.30;branch=z9hG4bKcc6b6474b35578
+Call-ID: d08fc80-1ed171b7-cc2904-1e09010a@10.1.9.30
+From: "MUDLAGIR BALERI" <sip:10.1.9.30>;tag=34172708~cea8fae9-8379-4502-a91f-09435529c1fb-25922772
+To: <sip:4086422254@10.37.2.112>;tag=uy3gttsuew7n-57Kz3QMUsifheRHwwfn
+CSeq: 101 INVITE
+Content-Length:  0
+
+
+--end msg--
+2021-12-02 13:08:59.808 [I] [23288] [evtdisp]   ......... --> Disconnected
+2021-12-02 13:08:59.808 [I] [23288] [evtdisp]   .........  [DISCONNCTD] To: "MUDLAGIR BALERI" <sip:10.1.9.30>;tag=34172708~cea8fae9-8379-4502-a91f-09435529c1fb-25922772
+    Call time: 00h:00m:00s, 1st res in 5656 ms, conn in 0ms
+
+2021-12-02 13:08:59.808 [D] [23288] [evtdisp]   .........Deleting account 53..
+2021-12-02 13:08:59.808 [D] [23288] [evtdisp]   ..........Account id 53 deleted
+2021-12-02 13:08:59.808 [D] [23288] [evtdisp]   .........Call 63: deinitializing media..
+2021-12-02 13:08:59.809 [D] [23293] [pjsua_0]   .RX 491 bytes Request msg ACK/cseq=101 (rdata0x7f4270000c80) from TCP 10.1.9.30:34107:
+ACK sip:4086422254@10.37.2.112:5060 SIP/2.0
+Via: SIP/2.0/TCP 10.1.9.30:5060;branch=z9hG4bKcc6b6474b35578
+From: "MUDLAGIR BALERI" <sip:4084406484@10.1.9.30>;tag=34172708~cea8fae9-8379-4502-a91f-09435529c1fb-25922772
+To: <sip:4086422254@10.37.2.112>;tag=uy3gttsuew7n-57Kz3QMUsifheRHwwfn
+Date: Thu, 02 Dec 2021 21:08:54 GMT
+Call-ID: d08fc80-1ed171b7-cc2904-1e09010a@10.1.9.30
+User-Agent: Cisco-CUCM12.5
+Max-Forwards: 70
+CSeq: 101 ACK
+Allow-Events: presence, kpml
+Content-Length: 0
+
+###################################################
+
+With SPP script: 
+Command: C:\cygwin64\Sipp_3.2>sipp 10.37.2.112:5060 -sf uac-invite-with-no-user.xml -m 1
+-l 1
+
+INVITE sip:service@10.37.2.112:5060;user=phone SIP/2.0
+Via: SIP/2.0/UDP 10.37.2.126;branch=z9hG4bK-3112-1-0
+Allow-Events: refer, message-summary, dialog, wave-event, as-feature-event
+Call-ID: 1-3112@10.37.2.126
+From: <sip:10.37.2.126:5060;user=phone>;tag=3112+1
+To: <sip:5572213600@10.37.2.112:5060;user=phone>
+CSeq: 1 INVITE
+Supported: replaces
+Content-Length:   270
+Contact: <sip:10.37.2.126:5060;transport=UDP>
+Max-Forwards: 70
+Content-Type: application/sdp
+User-Agent: Wave/7.0.0.6397
+
+v=0
+o=CiscoSystemsSIP-GW-UserAgent 9826 4797 IN IP4 10.37.2.126
+s=SIP Call
+c=IN IP4 10.37.2.126
+t=0 0
+m=audio 17722 RTP/AVP 0 101 19
+c=IN IP4 10.37.2.126
+a=rtpmap:0 PCMU/8000
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-15
+a=rtpmap:19 CN/8000
+a=ptime:20
+
+
+--end msg--
+2021-12-02 13:12:50.768 [D] [23293] [pjsua_0]   .Enqueue. SignalOnRxReqEvent Queue Size: 1
+2021-12-02 13:12:50.768 [D] [23288] [evtdisp]   Dequeue. SignalOnRxReqEvent Queue Size: 0
+2021-12-02 13:12:50.768 [D] [23288] [evtdisp]   Processing SIP INVITE received for call id: 1-3112@10.37.2.126
+2021-12-02 13:12:50.768 [D] [23288] [evtdisp]   Incoming (null)
+2021-12-02 13:12:50.768 [D] [23288] [evtdisp]   .Adding account: id=<sip:5572213600@10.37.2.112>
+2021-12-02 13:12:50.768 [D] [23288] [evtdisp]   ..Account <sip:5572213600@10.37.2.112> added with id 53
+2021-12-02 13:12:50.768 [D] [23288] [evtdisp]   .Call 64: initializing media..
+2021-12-02 13:12:50.769 [D] [23288] [evtdisp]   ..RTP socket reachable at 10.37.2.112:4000
+2021-12-02 13:12:50.769 [D] [23288] [evtdisp]   ..RTCP socket reachable at 10.37.2.112:4001
+2021-12-02 13:12:50.769 [D] [23288] [evtdisp]   ..Media index 0 selected for audio call 64
+2021-12-02 13:12:50.769 [D] [23288] [evtdisp]   ..RTP socket reachable at 10.37.2.112:9328
+2021-12-02 13:12:50.769 [D] [23288] [evtdisp]   ..RTCP socket reachable at 10.37.2.112:9329
+2021-12-02 13:12:50.769 [D] [23288] [evtdisp]   ....TX 254 bytes Response msg 100/INVITE/cseq=1 (tdta0x7f426c6872f8) to UDP 10.37.2.126:5060:
+SIP/2.0 100 Trying
+Via: SIP/2.0/UDP 10.37.2.126;received=10.37.2.126;branch=z9hG4bK-3112-1-0
+Call-ID: 1-3112@10.37.2.126
+From: <sip:10.37.2.126;user=phone>;tag=3112+1
+To: <sip:5572213600@10.37.2.112;user=phone>
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+
+
+--end msg--
+2021-12-02 13:12:55.424 [D] [23289] [SockCom]   Heartbeat Timer Tick
+2021-12-02 13:12:55.783 [D] [23293] [pjsua_0]   .RX 325 bytes Request msg CANCEL/cseq=1 (rdata0x7f4270003818) from UDP 10.37.2.126:5060:
+CANCEL sip:service@10.37.2.112:5060;user=phone SIP/2.0
+Via: SIP/2.0/UDP 10.37.2.126;branch=z9hG4bK-3112-1-0
+From: <sip:10.37.2.126:5060;user=phone>;tag=3112+1
+To: <sip:5572213600@10.37.2.112:5060;user=phone>
+Call-ID: 1-3112@10.37.2.126
+Cseq: 1 CANCEL
+Contact: <sip:10.37.2.126:5060;transport=UDP>
+Content-Length: 0
+
+
+--end msg--
+2021-12-02 13:12:55.783 [D] [23293] [pjsua_0]   .Enqueue. SignalOnRxReqEvent Queue Size: 1
+2021-12-02 13:12:55.784 [D] [23288] [evtdisp]   Dequeue. SignalOnRxReqEvent Queue Size: 0
+2021-12-02 13:12:55.784 [D] [23288] [evtdisp]   Processing SIP CANCEL received for call id: 1-3112@10.37.2.126
+2021-12-02 13:12:55.784 [D] [23288] [evtdisp]   ......TX 287 bytes Response msg 200/CANCEL/cseq=1 (tdta0x7f426c68aa68) to UDP 10.37.2.126:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.37.2.126;received=10.37.2.126;branch=z9hG4bK-3112-1-0
+Call-ID: 1-3112@10.37.2.126
+From: <sip:10.37.2.126;user=phone>;tag=3112+1
+To: <sip:5572213600@10.37.2.112;user=phone>;tag=ARdrjgB2fGfn9fr7is-V6TiFRPPKS-MD
+CSeq: 1 CANCEL
+Content-Length:  0
+
+
+--end msg--
+2021-12-02 13:12:55.784 [D] [23288] [evtdisp]   ......TX 303 bytes Response msg 487/INVITE/cseq=1 (tdta0x7f426c6872f8) to UDP 10.37.2.126:5060:
+SIP/2.0 487 Request Terminated
+Via: SIP/2.0/UDP 10.37.2.126;received=10.37.2.126;branch=z9hG4bK-3112-1-0
+Call-ID: 1-3112@10.37.2.126
+From: <sip:10.37.2.126;user=phone>;tag=3112+1
+To: <sip:5572213600@10.37.2.112;user=phone>;tag=ARdrjgB2fGfn9fr7is-V6TiFRPPKS-MD
+CSeq: 1 INVITE
+Content-Length:  0
