@@ -5,3 +5,6 @@ cygwin64\Sipp_3.2>sipp 10.37.2.112:5060 -sf uac-load.xml -i 10.37.2.126 -s 55
 
 Call acceptor command:
 c:\cygwin64\Sipp_3.2>sipp 10.37.2.112:5060 -sf options-invite-PRACK-200.xml -i 10.37.2.126 -p 5060
+
+
+Readme
